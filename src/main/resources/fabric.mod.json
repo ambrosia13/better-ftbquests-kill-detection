@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "better-ftbquests-kill-detection",
+	"version": "${version}",
+	"name": "Better FTBQuests Kill Detection",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/better-ftbquests-kill-detection/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.ambrosia13.ftbquestskilldetection.BetterFTBQuestsKillDetection"
+		],
+		"client": [
+			"io.github.ambrosia13.ftbquestskilldetection.BetterFTBQuestsKillDetectionClient"
+		]
+	},
+	"mixins": [
+		"better-ftbquests-kill-detection.mixins.json",
+		{
+			"config": "better-ftbquests-kill-detection.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
